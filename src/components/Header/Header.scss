@@ -1,5 +1,6 @@
 @import '../../styles/general.scss';
 @import '../../styles/colors.scss';
+@import '../../styles/breakpoints.scss';
 
 .header {
   display: flex;
@@ -10,6 +11,7 @@
   font-size: 1rem;
   font-weight: 500;
   text-transform: uppercase;
+  transition: 0.3s ease all;
 
   &-title {
     padding: 1rem 0;
@@ -35,6 +37,9 @@
     }
   }
 
+  @media screen and (max-width: $breakpoint-tablet) {
+    padding: 0;
+  }
 }
 
 
