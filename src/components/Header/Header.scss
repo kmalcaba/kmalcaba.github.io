@@ -1,0 +1,39 @@
+@import '../../styles/general.scss';
+@import '../../styles/colors.scss';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 4px solid $primary-color;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  &-title {}
+
+  .sticky {
+    position: sticky;
+    top: 1rem;
+  }
+
+  &-nav {
+    
+    ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+      gap: 1.5rem;
+
+      li a {
+        text-decoration: none;
+        color: $primary-color;
+      }
+    }
+  }
+
+}
+
+
+

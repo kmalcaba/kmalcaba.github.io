@@ -1,15 +1,23 @@
-function Header() {
+import "./Header.scss";
+
+function Header({ title = "KIRSTEN" }) {
   return (
-    <div>
-      <div className="title">KIRSTEN</div>
-      <nav className="nav">
+    <header className="header">
+      <div className="header-title">{title}</div>
+      <nav className="header-nav">
         <ul>
-          <li>ABOUT</li>
-          <li>PROJECTS</li>
-          <li>CONTACT</li>
+          <li>
+            <a href="/">ABOUT</a>
+          </li>
+          <li>
+            <a href="/">PROJECTS</a>
+          </li>
+          <li>
+            <a href="/">CONTACT</a>
+          </li>
         </ul>
       </nav>
-    </div>
+    </header>
   );
 }
 export default Header;
