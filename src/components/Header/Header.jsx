@@ -26,7 +26,7 @@ function Header({ title = "KIRSTEN", subHeader = false }) {
 
   useEffect(() => {
     if (size.width > 768 && isOpen) {
-      isOpen(false);
+      setOpen(false);
     }
   }, [size.width, isOpen]);
 
