@@ -6,6 +6,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   transition: 0.3s ease all;
+  margin: 1rem 0;
 
   @media screen and (max-width: $breakpoint-tablet) {
     grid-template-columns: 1fr;

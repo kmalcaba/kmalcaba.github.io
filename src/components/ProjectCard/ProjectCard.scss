@@ -6,7 +6,7 @@
   padding: 1rem;
 
   @media screen and (max-width: $breakpoint-tablet) {
-    padding: 0;
+    padding: 1rem 0;
   }
 
   h3 {
@@ -33,7 +33,6 @@
 
   &-footer {
     display: flex;
-    justify-content: flex-end;
     gap: 1rem;
   }
 }
