@@ -1,11 +1,11 @@
-@import '../../styles/general.scss';
-@import '../../styles/breakpoints.scss';
+@import "../../styles/general.scss";
+@import "../../styles/breakpoints.scss";
 
 .hero {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-top: 200px;
+  margin-top: 100px;
   transition: 0.3s ease all;
 
   &-content {
