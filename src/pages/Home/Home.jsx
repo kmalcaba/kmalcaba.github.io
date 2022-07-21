@@ -9,6 +9,7 @@ function Home() {
       <Hero />
       <Header title="FEATURED PROJECTS" subHeader={true} />
       <Projects />
+      <Header title="CONTACT" subHeader={true} />
     </>
   );
 }
