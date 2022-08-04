@@ -1,7 +1,7 @@
 import "./ProjectCard.scss";
 
 function ProjectCard({
-  project: { title, tags, description, previewLink, sourceLink },
+  project: { title, tags, description, image, previewLink, sourceLink },
 }) {
   const previewHandler = () => {};
 
@@ -9,6 +9,7 @@ function ProjectCard({
 
   return (
     <div className="project-card">
+      <img src={image} alt={title} />
       <h3>{title}</h3>
       <ul className="tags">
         {tags.map((tag, index) => (
