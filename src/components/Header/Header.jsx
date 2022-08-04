@@ -1,6 +1,6 @@
 import "./Header.scss";
 import { RiMenuFill, RiCloseFill } from "react-icons/ri";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const NAVBAR_LINKS = ["about", "projects", "contact"];
@@ -24,38 +24,13 @@ const variants = {
 
 function Header({ title = "KIRSTEN", subHeader = false }) {
   const [isOpen, setOpen] = useState(false);
-  const [size, setSize] = useState({
-    width: undefined,
-    height: undefined,
-  });
-
-  useEffect(() => {
-    const handleResize = () => {
-      setSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (size.width > 768 && isOpen) {
-      setOpen(false);
-    }
-  }, [size.width, isOpen]);
 
   const toggleHandler = () => {
     setOpen((previousState) => !previousState);
   };
 
   return (
-    <nav className="header">
+    <nav className="header container">
       <div className="header-title">{title}</div>
       {!subHeader && (
         <>
