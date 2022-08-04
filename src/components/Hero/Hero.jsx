@@ -4,8 +4,8 @@ import { ContainerWrapper, MotionWrapper } from "../../wrapper";
 function Hero() {
   return (
     <div className="hero">
+      <h1>👋 Hi, I'm Kirsten!</h1>
       <div className="hero-content">
-        <h1>👋 Hi, I'm Kirsten!</h1>
         <p>
           I am a web developer with 1.5 YOE in{" "}
           <span>ReactJS, Redux, JavaScript</span>.<br />I value{" "}
