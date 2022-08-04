@@ -1,5 +1,6 @@
 @import "./mixins.scss";
 @import "./colors.scss";
+@import "./breakpoints.scss";
 
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
@@ -24,13 +25,15 @@ button,
   @include default-button();
   transition: 0.3s ease background-color, 0.3s ease color;
   text-transform: uppercase;
-  font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   box-shadow: 0 2px 5px rgba($color-primary, 0.15);
+  font-size: 0.9rem;
 
   &-primary {
-    border: 1px solid $color-primary;
+    border: none;
     color: $color-primary;
+    background: $color-white;
 
     &:hover,
     &:active {
@@ -57,7 +60,17 @@ button,
 }
 
 .container {
-  margin: 1rem 0 2rem 0;
+  width: 920px;
+  max-width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @media screen and (max-width: $breakpoint-desktop) {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .flex-center {
