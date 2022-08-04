@@ -45,59 +45,92 @@
         cursor: pointer;
         font-size: 0.8rem;
         color: $color-gray;
+      }
 
-        @media screen and (max-width: $breakpoint-mobile) {
-          color: $color-white;
-        }
+      @media screen and (max-width: $breakpoint-tablet) {
+        display: none;
       }
     }
 
-    &.mobile-menu {
-      transform: translate(100%);
-    }
-
-    @media screen and (max-width: $breakpoint-mobile) {
-      top: 0;
-      right: 100%;
-      bottom: 0;
-      width: 100%;
-      height: 100vh;
-      position: fixed;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      background-color: rgba($color-black, 0.95);
-      backdrop-filter: blur(2px);
-      transform: translate(0);
+    @media screen and (max-width: $breakpoint-tablet) {
+      padding: 0;
     }
   }
 
-  &-toggle {
-    display: none;
+  &-nav-mobile {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: relative;
 
-    @media screen and (max-width: $breakpoint-mobile) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $color-primary;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+      display: none;
+    }
+
+    svg {
+      width: 60%;
+      height: 60%;
+      color: $color-white;
       cursor: pointer;
+    }
+
+    div {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 5;
+
+      padding: 1rem;
+
+      width: 50%;
+      height: 100vh;
+
       display: flex;
-      align-items: center;
-      font-size: 1.5rem;
-      transition: 0.3s ease all;
-      position: relative;
+      justify-content: flex-end;
+      align-items: flex-end;
+      flex-direction: column;
+
+      background-color: $color-white;
+      box-shadow: 0 0 20px rgba($color-gray, 0.15);
 
       svg {
+        width: 30px;
+        height: 30px;
         color: $color-primary;
+        margin: 0.5rem 1rem;
+      }
 
-        &.close {
-          color: $color-white;
-          z-index: 100;
-          font-size: 2rem;
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+
+        li {
+          margin: 1rem;
+
+          a {
+            color: $color-gray;
+            text-decoration: none;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            font-weight: 500;
+          }
         }
       }
     }
-  }
-
-  @media screen and (max-width: $breakpoint-tablet) {
-    padding: 0;
   }
 }
