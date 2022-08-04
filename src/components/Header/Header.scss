@@ -13,6 +13,10 @@
   text-transform: uppercase;
   transition: 0.3s ease all;
 
+  @media screen and (max-width: $breakpoint-tablet) {
+    padding: 0;
+  }
+
   &-title {
     padding: 1rem 0;
     color: $color-primary;
@@ -50,10 +54,6 @@
       @media screen and (max-width: $breakpoint-tablet) {
         display: none;
       }
-    }
-
-    @media screen and (max-width: $breakpoint-tablet) {
-      padding: 0;
     }
   }
 
