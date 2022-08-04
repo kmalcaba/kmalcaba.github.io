@@ -2,12 +2,38 @@
 @import "../../styles/colors.scss";
 @import "../../styles/breakpoints.scss";
 
+.sticky {
+  position: fixed;
+  margin-top: -0.5rem;
+  margin-left: -0.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba($color-white, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    .header {
+      margin-left: -0.5rem;
+
+      &-title {
+        padding: 1rem 0.5rem;
+      }
+    }
+  }
+}
+
+.subheader {
+  width: 100%;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid $color-secondary;
-  padding: 0 1rem;
   font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -18,17 +44,16 @@
   }
 
   &-title {
-    padding: 1rem 0;
+    padding: 1rem;
     color: $color-primary;
-  }
-
-  .sticky {
-    position: sticky;
-    top: 1rem;
   }
 
   &-nav {
     transition: 0.3s ease transform;
+
+    @media screen and (max-width: $breakpoint-tablet) {
+      display: none;
+    }
 
     ul {
       list-style-type: none;
@@ -55,10 +80,6 @@
           color: $color-primary;
         }
       }
-
-      @media screen and (max-width: $breakpoint-tablet) {
-        display: none;
-      }
     }
   }
 
@@ -67,6 +88,7 @@
     height: 30px;
     border-radius: 50%;
     position: relative;
+    left: -2rem;
 
     display: flex;
     justify-content: center;

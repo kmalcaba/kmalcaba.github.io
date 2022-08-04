@@ -5,12 +5,12 @@ import "./Home.scss";
 
 function Home() {
   return (
-    <>
+    <main className="index">
       <Hero />
       <Header title="FEATURED PROJECTS" subHeader={true} />
       <Projects />
       <Header title="CONTACT" subHeader={true} />
-    </>
+    </main>
   );
 }
 export default Home;

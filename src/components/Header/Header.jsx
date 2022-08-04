@@ -30,51 +30,53 @@ function Header({ title = "KIRSTEN", subHeader = false }) {
   };
 
   return (
-    <nav className="header container">
-      <div className="header-title">{title}</div>
-      {!subHeader && (
-        <>
-          <div className="header-nav">
-            <ul>
-              {NAVBAR_LINKS.map((item) => (
-                <li key={`link-${item}`}>
-                  <a href={`#${item}`}>{item}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="header-nav-mobile">
-            <RiMenuFill onClick={toggleHandler} />
+    <nav className={`${!subHeader && `sticky`}`}>
+      <div className={`header ${!subHeader ? `container` : `subheader`}`}>
+        <div className="header-title">{title}</div>
+        {!subHeader && (
+          <>
+            <div className="header-nav">
+              <ul>
+                {NAVBAR_LINKS.map((item) => (
+                  <li key={`link-${item}`}>
+                    <a href={`#${item}`}>{item}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="header-nav-mobile">
+              <RiMenuFill onClick={toggleHandler} />
 
-            <AnimatePresence initial={false}>
-              {isOpen && (
-                <motion.div
-                  key="header-nav-mobile"
-                  variants={variants}
-                  initial="enter"
-                  animate="center"
-                  exit="exit"
-                  transition={{
-                    x: { type: "spring", stiffness: 300, damping: 30 },
-                    opacity: { duration: 0.2 },
-                  }}
-                >
-                  <RiCloseFill onClick={toggleHandler} />
-                  <ul>
-                    {NAVBAR_LINKS.map((item) => (
-                      <li key={item}>
-                        <a href={`#${item}`} onClick={toggleHandler}>
-                          {item}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>{" "}
-        </>
-      )}
+              <AnimatePresence initial={false}>
+                {isOpen && (
+                  <motion.div
+                    key="header-nav-mobile"
+                    variants={variants}
+                    initial="enter"
+                    animate="center"
+                    exit="exit"
+                    transition={{
+                      x: { type: "spring", stiffness: 300, damping: 30 },
+                      opacity: { duration: 0.2 },
+                    }}
+                  >
+                    <RiCloseFill onClick={toggleHandler} />
+                    <ul>
+                      {NAVBAR_LINKS.map((item) => (
+                        <li key={item}>
+                          <a href={`#${item}`} onClick={toggleHandler}>
+                            {item}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          </>
+        )}
+      </div>
     </nav>
   );
 }
