@@ -4,7 +4,7 @@ function Hero() {
   return (
     <section className="hero">
       <div className="hero-content">
-        <h1>Hi, I'm Kirsten!</h1>
+        <h1>👋 Hi, I'm Kirsten!</h1>
         <p>
           I am a front-end developer who likes to dabble with full-stack apps
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod
