@@ -1,8 +1,8 @@
 import "./Projects.scss";
 import ProjectCard from "../ProjectCard/ProjectCard";
 import { ContainerWrapper, MotionWrapper } from "../../wrapper";
-
 import { images } from "../../constants";
+import { motion } from "framer-motion";
 
 function Projects() {
   const project = {
@@ -16,12 +16,17 @@ function Projects() {
   };
 
   return (
-    <div className="projects">
+    <div>
       {
         // TODO: Add filtering logic here
       }
-      <ProjectCard project={project} />
-      <ProjectCard project={project} />
+      <motion.div
+        transition={{ duration: 0.3, delayChildren: 0.3, staggerChildren: 0.3 }}
+        className="project-cards"
+      >
+        <ProjectCard project={project} />
+        <ProjectCard project={project} />
+      </motion.div>
     </div>
   );
 }
