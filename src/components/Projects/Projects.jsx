@@ -1,5 +1,8 @@
 import "./Projects.scss";
 import ProjectCard from "../ProjectCard/ProjectCard";
+import { ContainerWrapper, MotionWrapper } from "../../wrapper";
+
+import { images } from "../../constants";
 
 function Projects() {
   const project = {
@@ -7,6 +10,7 @@ function Projects() {
     tags: ["ReactJS", "HTML/CSS"],
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium officiis qui ad consectetur quos dolorem consequatur exercitationem fugit debitis repudiandae placeat aperiam, iste animi laboriosam! Porro laborum vel possimus recusandae?",
+    image: images.about01,
     previewLink: "/",
     sourceLink: "/",
   };
@@ -21,4 +25,4 @@ function Projects() {
     </section>
   );
 }
-export default Projects;
+export default ContainerWrapper(MotionWrapper(Projects), "projects");
