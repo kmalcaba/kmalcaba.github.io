@@ -21,20 +21,24 @@ function ProjectCard({
       </ul>
       <p>{description}</p>
       <div className="project-card-footer">
-        <Button
-          className="btn-primary"
-          onClick={previewHandler}
-          Icon={AiFillEye}
-        >
-          Preview
-        </Button>
-        <Button
-          className="btn-primary"
-          onClick={sourceHandler}
-          Icon={AiFillGithub}
-        >
-          Github
-        </Button>
+        <a href="previewLink" target="_blank" rel="noreferrer">
+          <Button
+            className="btn-primary"
+            onClick={previewHandler}
+            Icon={AiFillEye}
+          >
+            Preview
+          </Button>
+        </a>
+        <a href="sourceLink" target="_blank" rel="noreferrer">
+          <Button
+            className="btn-primary"
+            onClick={sourceHandler}
+            Icon={AiFillGithub}
+          >
+            Github
+          </Button>
+        </a>
       </div>
     </div>
   );
