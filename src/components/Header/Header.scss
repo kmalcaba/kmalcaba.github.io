@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid $color-primary;
+  border-bottom: 1px solid $color-secondary;
   padding: 0 1rem;
   font-size: 1rem;
   font-weight: 600;
@@ -15,6 +15,7 @@
 
   &-title {
     padding: 1rem 0;
+    color: $color-primary;
   }
 
   .sticky {
@@ -42,7 +43,8 @@
       li a {
         text-decoration: none;
         cursor: pointer;
-        color: $color-primary;
+        font-size: 0.8rem;
+        color: $color-gray;
 
         @media screen and (max-width: $breakpoint-mobile) {
           color: $color-white;
