@@ -7,11 +7,15 @@ function Hero() {
       <div className="hero-content">
         <h1>👋 Hi, I'm Kirsten!</h1>
         <p>
-          I am a front-end developer who likes to dabble with full-stack apps
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod
-          officiis dolor commodi voluptatum odio voluptate, placeat, delectus
-          nobis voluptatibus distinctio vitae assumenda molestias amet officia,
-          in molestiae iste vel aperiam.
+          I am a web developer with 1.5 YOE in{" "}
+          <span>ReactJS, Redux, JavaScript</span>. My professional experiences
+          include <span>collaborating with teams</span> in building and testing{" "}
+          <span>reliable, quality web applications and web sites</span> for
+          clients worldwide.
+        </p>
+        <p>
+          Check out my <a href="#projects">personal projects</a> below, or{" "}
+          <a href="#contact">contact me</a> for any opportunities!
         </p>
       </div>
     </div>
