@@ -21,7 +21,7 @@ function ProjectCard({
       </ul>
       <p>{description}</p>
       <div className="project-card-footer">
-        <a href="previewLink" target="_blank" rel="noreferrer">
+        <a href={previewLink} target="_blank" rel="noreferrer">
           <Button
             className="btn-primary"
             onClick={previewHandler}
@@ -30,7 +30,7 @@ function ProjectCard({
             Preview
           </Button>
         </a>
-        <a href="sourceLink" target="_blank" rel="noreferrer">
+        <a href={sourceLink} target="_blank" rel="noreferrer">
           <Button
             className="btn-primary"
             onClick={sourceHandler}
