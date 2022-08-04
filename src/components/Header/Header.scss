@@ -49,6 +49,11 @@
         cursor: pointer;
         font-size: 0.8rem;
         color: $color-gray;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          color: $color-primary;
+        }
       }
 
       @media screen and (max-width: $breakpoint-tablet) {
@@ -128,6 +133,11 @@
             font-size: 0.9rem;
             text-transform: uppercase;
             font-weight: 500;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+              color: $color-primary;
+            }
           }
         }
       }
