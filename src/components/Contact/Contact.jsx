@@ -12,7 +12,7 @@ function Contact() {
         <a className="contact-link" href="mailto:kmalcaba@live.com">
           email
         </a>
-        !
+        ! 💌
       </h2>
       <div className="contact-cards">
         <a href="mailto:kmalcaba@live.com">
