@@ -14,7 +14,7 @@
   -webkit-backdrop-filter: blur(4px);
   transition: 0.3s ease all;
 
-  @media screen and (max-width: $breakpoint-tablet) {
+  @media screen and (max-width: $breakpoint-desktop) {
     .container {
       padding: 0;
     }

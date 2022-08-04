@@ -29,11 +29,12 @@ code {
   width: 960px;
   max-width: 100%;
   box-sizing: border-box;
+  transition: transform 0.3s ease-in-out;
 
   @media screen and (max-width: $breakpoint-desktop) {
     width: 100%;
     max-width: 100%;
-    padding: 0;
+    padding: 0 1rem;
     margin: 0;
   }
 
