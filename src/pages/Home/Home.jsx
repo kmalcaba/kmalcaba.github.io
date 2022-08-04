@@ -6,6 +6,7 @@ import "./Home.scss";
 function Home() {
   return (
     <main className="index">
+      <Header />
       <Hero />
       <Header title="FEATURED PROJECTS" subHeader={true} />
       <Projects />
