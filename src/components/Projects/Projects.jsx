@@ -77,7 +77,11 @@ function Projects() {
     <div className="project">
       <ul className="project-tags">
         {TAGS_ARRAY.map((item) => (
-          <li key={`filter-${item}`} onClick={() => handleFilter(item)}>
+          <li
+            key={`filter-${item}`}
+            className={item === activeFilter && "active"}
+            onClick={() => handleFilter(item)}
+          >
             {item}
           </li>
         ))}

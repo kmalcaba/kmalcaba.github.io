@@ -6,8 +6,32 @@
   flex-direction: column;
 
   &-tags {
+    list-style-type: none;
+    padding: 2rem 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+
     li {
       cursor: pointer;
+      background-color: $color-secondary;
+      padding: 0.5rem 1rem;
+      border-radius: 1.5rem;
+      color: $color-gray;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: $color-primary;
+        color: $color-white;
+      }
+
+      &.active {
+        background-color: $color-primary;
+        color: $color-white;
+      }
     }
   }
 
