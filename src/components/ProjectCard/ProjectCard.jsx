@@ -1,4 +1,7 @@
 import "./ProjectCard.scss";
+import Button from "../Button/Button";
+
+import { AiFillEye, AiFillGithub } from "react-icons/ai";
 
 function ProjectCard({
   project: { title, tags, description, image, previewLink, sourceLink },
@@ -18,12 +21,20 @@ function ProjectCard({
       </ul>
       <p>{description}</p>
       <div className="project-card-footer">
-        <button className="btn-primary" onClick={previewHandler}>
+        <Button
+          className="btn-primary"
+          onClick={previewHandler}
+          Icon={AiFillEye}
+        >
           Preview
-        </button>
-        <button className="btn-primary" onClick={sourceHandler}>
+        </Button>
+        <Button
+          className="btn-primary"
+          onClick={sourceHandler}
+          Icon={AiFillGithub}
+        >
           Github
-        </button>
+        </Button>
       </div>
     </div>
   );
