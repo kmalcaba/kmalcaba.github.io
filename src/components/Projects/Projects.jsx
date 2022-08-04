@@ -79,7 +79,7 @@ function Projects() {
         {TAGS_ARRAY.map((item) => (
           <li
             key={`filter-${item}`}
-            className={item === activeFilter && "active"}
+            className={item === activeFilter ? "active" : undefined}
             onClick={() => handleFilter(item)}
           >
             {item}
@@ -91,9 +91,13 @@ function Projects() {
         transition={{ duration: 0.3, delayChildren: 0.3, staggerChildren: 0.5 }}
         className="project-cards"
       >
-        {filteredProjects.map((project) => (
-          <ProjectCard key={project.title} project={project} />
-        ))}
+        {filteredProjects.length > 0 ? (
+          filteredProjects.map((project) => (
+            <ProjectCard key={project.title} project={project} />
+          ))
+        ) : (
+          <div className="project-empty">No projects found!</div>
+        )}
       </motion.div>
     </div>
   );
