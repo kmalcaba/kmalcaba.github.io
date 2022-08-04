@@ -1,3 +1,4 @@
+import Contact from "../../components/Contact/Contact";
 import Header from "../../components/Header/Header";
 import Hero from "../../components/Hero/Hero";
 import Projects from "../../components/Projects/Projects";
@@ -11,6 +12,7 @@ function Home() {
       <Header title="FEATURED PROJECTS" subHeader={true} />
       <Projects />
       <Header title="CONTACT" subHeader={true} />
+      <Contact />
     </main>
   );
 }
