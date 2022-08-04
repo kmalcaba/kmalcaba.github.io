@@ -17,4 +17,4 @@ function Hero() {
     </div>
   );
 }
-export default ContainerWrapper(MotionWrapper(Hero), "hero");
+export default ContainerWrapper(MotionWrapper(Hero), "about");
