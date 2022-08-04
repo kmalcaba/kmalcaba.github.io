@@ -43,6 +43,19 @@ code {
   }
 }
 
+section.container {
+  padding: 2rem 0;
+
+  @media screen and (max-width: $breakpoint-desktop) {
+    padding: 1rem;
+    margin: 0;
+  }
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    padding: 1rem 2rem;
+  }
+}
+
 .flex-center {
   display: flex;
   justify-content: center;
