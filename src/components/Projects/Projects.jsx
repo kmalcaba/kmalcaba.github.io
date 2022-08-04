@@ -16,13 +16,13 @@ function Projects() {
   };
 
   return (
-    <section className="projects">
+    <div className="projects">
       {
         // TODO: Add filtering logic here
       }
       <ProjectCard project={project} />
       <ProjectCard project={project} />
-    </section>
+    </div>
   );
 }
 export default ContainerWrapper(MotionWrapper(Projects), "projects");
