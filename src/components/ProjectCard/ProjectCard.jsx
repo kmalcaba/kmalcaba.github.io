@@ -1,5 +1,6 @@
 import "./ProjectCard.scss";
 import Button from "../Button/Button";
+import HighlightLink from "../HighlightLink/HighlightLink";
 
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
 
@@ -16,7 +17,9 @@ function ProjectCard({
       <h3>{title}</h3>
       <ul className="tags">
         {tags.map((tag, index) => (
-          <li key={index}>{tag}</li>
+          <li key={index}>
+            <HighlightLink>{tag}</HighlightLink>
+          </li>
         ))}
       </ul>
       <p>{description}</p>
