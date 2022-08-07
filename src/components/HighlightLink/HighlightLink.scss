@@ -1,0 +1,25 @@
+@import "../../styles/colors.scss";
+
+a.highlight {
+  position: relative;
+  display: inline-block;
+
+  &::before {
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 0.5rem;
+    background-color: rgba($color-primary, 0.2);
+    content: "";
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:hover::before,
+  a:focus::before {
+    bottom: 0;
+    height: 70%;
+  }
+}
