@@ -7,9 +7,9 @@ function Hero() {
       <h1>👋 Hi, I'm Kirsten!</h1>
       <div className="hero-content">
         <p>
-          I am a web developer with 1.5 YOE in{" "}
-          <span>ReactJS, Redux, JavaScript</span>.<br />I value{" "}
-          <span>collaborating with teams</span> in building and testing{" "}
+          I am a web developer based in BC, Canada. I have 1.5 YOE in
+          <span>ReactJS, Redux, JavaScript</span>, where I{" "}
+          <span>collaborated with teams</span> in building and testing{" "}
           <span>reliable, quality web applications and web sites</span>.
         </p>
         <p>
