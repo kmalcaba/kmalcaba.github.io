@@ -9,13 +9,13 @@ function Contact() {
     <div className="contact">
       <h2>
         Get in touch, drop me an{" "}
-        <a className="contact-link" href="mailto:kmalcaba@live.com">
+        <a className="contact-link" href="mailto:kirsten.malcaba@outlook.com">
           email
         </a>
         ! 💌
       </h2>
       <div className="contact-cards">
-        <a href="mailto:kmalcaba@live.com">
+        <a href="mailto:kirsten.malcaba@outlook.com">
           <Button className="btn-primary" Icon={AiFillMail}>
             Email
           </Button>
