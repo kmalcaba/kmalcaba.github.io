@@ -30,10 +30,11 @@
     padding: 0;
 
     li {
-      cursor: default;
-      border-bottom: 1px solid $color-gray;
-      transition: 0.2s ease all;
       font-size: 0.85rem;
+
+      a {
+        cursor: pointer;
+      }
     }
   }
 

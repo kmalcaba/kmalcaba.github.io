@@ -1,5 +1,6 @@
 import "./Hero.scss";
 import { ContainerWrapper, MotionWrapper } from "../../wrapper";
+import HighlightLink from "../HighlightLink/HighlightLink";
 
 function Hero() {
   return (
@@ -13,8 +14,10 @@ function Hero() {
           <span>reliable, quality web applications and web sites</span>.
         </p>
         <p>
-          Check out my <a href="#projects">personal projects</a> below, or{" "}
-          <a href="#contact">contact me</a> for any opportunities!
+          Check out my{" "}
+          <HighlightLink href="#projects">personal projects</HighlightLink>{" "}
+          below, or <HighlightLink href="#contact">contact me</HighlightLink>{" "}
+          for any opportunities!
         </p>
       </div>
     </div>
