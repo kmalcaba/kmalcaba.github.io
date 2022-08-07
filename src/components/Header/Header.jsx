@@ -32,7 +32,9 @@ function Header({ title = "KIRSTEN", subHeader = false }) {
   return (
     <nav className={`${!subHeader ? `sticky` : ""}`}>
       <div className={`header ${!subHeader ? `container` : `subheader`}`}>
-        <div className="header-title">{title}</div>
+        <div className="header-title">
+          {!subHeader ? <a href="#about">{title}</a> : title}
+        </div>
         {!subHeader && (
           <>
             <div className="header-nav">
