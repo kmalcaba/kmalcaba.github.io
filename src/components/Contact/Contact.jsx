@@ -1,5 +1,6 @@
 import "./Contact.scss";
 import Button from "../Button/Button";
+import HighlightLink from "../HighlightLink/HighlightLink";
 import { ContainerWrapper, MotionWrapper } from "../../wrapper";
 
 import { AiFillMail, AiFillLinkedin, AiFillGithub } from "react-icons/ai";
@@ -9,9 +10,9 @@ function Contact() {
     <div className="contact">
       <h2>
         Get in touch, drop me an{" "}
-        <a className="contact-link" href="mailto:kirsten.malcaba@outlook.com">
+        <HighlightLink href="mailto:kirsten.malcaba@outlook.com">
           email
-        </a>
+        </HighlightLink>
         ! 💌
       </h2>
       <div className="contact-cards">
