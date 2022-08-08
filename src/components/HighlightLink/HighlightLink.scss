@@ -3,6 +3,7 @@
 a.highlight {
   position: relative;
   display: inline-block;
+  z-index: -1;
 
   &::before {
     position: absolute;
