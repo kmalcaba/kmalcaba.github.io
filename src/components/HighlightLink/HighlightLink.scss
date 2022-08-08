@@ -14,13 +14,5 @@ a.highlight {
     height: 0.5rem;
     background-color: rgba($color-primary, 0.2);
     content: "";
-    -webkit-transition: -webkit-transform 0.2s;
-    transition: all 0.2s ease-in-out;
-  }
-
-  &:hover::before,
-  a:focus::before {
-    bottom: 0;
-    height: 70%;
   }
 }
