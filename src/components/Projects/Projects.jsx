@@ -93,7 +93,11 @@ function Projects() {
       >
         {filteredProjects.length > 0 ? (
           filteredProjects.map((project) => (
-            <ProjectCard key={project.title} project={project} />
+            <ProjectCard
+              key={project.title}
+              project={project}
+              handleFilter={handleFilter}
+            />
           ))
         ) : (
           <div className="project-empty">No projects found!</div>

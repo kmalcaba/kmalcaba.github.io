@@ -6,6 +6,7 @@ import { AiFillEye, AiFillGithub } from "react-icons/ai";
 
 function ProjectCard({
   project: { title, tags, description, image, previewLink, sourceLink },
+  handleFilter,
 }) {
   const previewHandler = () => {};
 
@@ -17,7 +18,7 @@ function ProjectCard({
       <h3>{title}</h3>
       <ul className="tags">
         {tags.map((tag, index) => (
-          <li key={index}>
+          <li key={index} onClick={() => handleFilter(tag)}>
             <HighlightLink>{tag}</HighlightLink>
           </li>
         ))}
