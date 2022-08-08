@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+# Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hello! This is the source code of my [portfolio site](https://kmalcaba.github.io/).
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+This portfolio project is used to showcase my React and SCSS skills, as well as to display my featured personal projects and a way to contact me.
 
-### `npm start`
+## Built with
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React
+- SCSS
+- CSS Grid and Flexbox
+- Framer-motion
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## What I learned
 
-### `npm test`
+I originally wanted to do this project with `styled-components` in mind instead of SCSS. I've tried it before but creating separate styled components with the CSS and the actual StyledComponent itself proved to be tedious for a simple portfolio website. So I decided to dip my toes in SCSS and my progress went a lot faster and smoother when building the components and the layout of the website itself.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The layout of the website right now is not what I had intended, at first. I think 50% of the original design remained, while everything else, including the colors, font family, and button styles became different as I was building the website. It really showed that no matter how much you plan, it will not always go accordingly. And that's okay!
 
-### `npm run build`
+I also learned about framer-motion! This is my first project using it and it is _so_ satisfying to animate components like that. I watched a YouTube tutorial and read through the documentation to be able to achieve what I currently have in the project.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Useful resources
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Build and Deploy a Fullstack Responsive Portfolio Website](https://www.youtube.com/watch?v=3HNyXCPDQ7Q) - I watched this tutorial for inspiration on the design I ended up adopting for my portfolio (though I took a more minimalist approach). This is also where I encountered framer-motion for the first time and it was easy to understand from this tutorial.
