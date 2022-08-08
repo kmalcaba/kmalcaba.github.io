@@ -2,18 +2,10 @@
 @import "../../styles/breakpoints.scss";
 
 .contact {
-  height: 40vh;
+  padding: 2rem 1rem 5rem 1rem;
   display: flex;
   align-items: center;
   flex-direction: column;
-
-  @media screen and (max-width: $breakpoint-tablet) {
-    height: 30vh;
-  }
-
-  @media screen and (max-height: $breakpoint-tablet) {
-    height: 65vh;
-  }
 
   h2 {
     justify-self: flex-start;
@@ -33,6 +25,9 @@
   .contact-cards {
     display: flex;
     gap: 1.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 
     a {
       text-decoration: none;
