@@ -50,32 +50,31 @@ function Header({ title = "KIRSTEN", subHeader = false }) {
             <div className="header-nav-mobile">
               <RiMenuFill onClick={toggleHandler} />
 
-              <AnimatePresence initial={false}>
-                {isOpen && (
-                  <motion.div
-                    key="header-nav-mobile"
-                    variants={variants}
-                    initial="enter"
-                    animate="center"
-                    exit="exit"
-                    transition={{
-                      x: { type: "spring", stiffness: 300, damping: 30 },
-                      opacity: { duration: 0.2 },
-                    }}
-                  >
-                    <RiCloseFill onClick={toggleHandler} />
-                    <ul>
-                      {NAVBAR_LINKS.map((item) => (
-                        <li key={item} onClick={toggleHandler}>
-                          <HighlightLink href={`#${item}`}>
-                            {item}
-                          </HighlightLink>
-                        </li>
-                      ))}
-                    </ul>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+              {/* <AnimatePresence initial={false}> */}
+              {isOpen && (
+                <motion.div
+                  key="header-nav-mobile"
+                  variants={variants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  layout
+                  transition={{
+                    x: { type: "spring", stiffness: 300, damping: 30 },
+                    opacity: { duration: 0.2 },
+                  }}
+                >
+                  <RiCloseFill onClick={toggleHandler} />
+                  <ul>
+                    {NAVBAR_LINKS.map((item) => (
+                      <li key={item} onClick={toggleHandler}>
+                        <HighlightLink href={`#${item}`}>{item}</HighlightLink>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              )}
+              {/* </AnimatePresence> */}
             </div>
           </>
         )}
