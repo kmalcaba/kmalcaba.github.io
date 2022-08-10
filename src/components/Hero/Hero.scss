@@ -31,6 +31,10 @@
 
       a {
         font-weight: 600;
+
+        &::before {
+          height: 70%;
+        }
       }
 
       span {

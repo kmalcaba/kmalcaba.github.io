@@ -1,4 +1,5 @@
 import "./Header.scss";
+import HighlightLink from "../HighlightLink/HighlightLink";
 import { RiMenuFill, RiCloseFill } from "react-icons/ri";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -41,7 +42,7 @@ function Header({ title = "KIRSTEN", subHeader = false }) {
               <ul>
                 {NAVBAR_LINKS.map((item) => (
                   <li key={`link-${item}`}>
-                    <a href={`#${item}`}>{item}</a>
+                    <HighlightLink href={`#${item}`}>{item}</HighlightLink>
                   </li>
                 ))}
               </ul>
@@ -66,9 +67,12 @@ function Header({ title = "KIRSTEN", subHeader = false }) {
                     <ul>
                       {NAVBAR_LINKS.map((item) => (
                         <li key={item}>
-                          <a href={`#${item}`} onClick={toggleHandler}>
+                          <HighlightLink
+                            href={`#${item}`}
+                            onClick={toggleHandler}
+                          >
                             {item}
-                          </a>
+                          </HighlightLink>
                         </li>
                       ))}
                     </ul>
