@@ -66,11 +66,8 @@ function Header({ title = "KIRSTEN", subHeader = false }) {
                     <RiCloseFill onClick={toggleHandler} />
                     <ul>
                       {NAVBAR_LINKS.map((item) => (
-                        <li key={item}>
-                          <HighlightLink
-                            href={`#${item}`}
-                            onClick={toggleHandler}
-                          >
+                        <li key={item} onClick={toggleHandler}>
+                          <HighlightLink href={`#${item}`}>
                             {item}
                           </HighlightLink>
                         </li>
