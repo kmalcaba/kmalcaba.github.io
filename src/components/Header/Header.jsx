@@ -2,7 +2,7 @@ import "./Header.scss";
 import HighlightLink from "../HighlightLink/HighlightLink";
 import { RiMenuFill, RiCloseFill } from "react-icons/ri";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 const NAVBAR_LINKS = ["about", "projects", "contact"];
 
@@ -50,15 +50,12 @@ function Header({ title = "KIRSTEN", subHeader = false }) {
             <div className="header-nav-mobile">
               <RiMenuFill onClick={toggleHandler} />
 
-              {/* <AnimatePresence initial={false}> */}
               {isOpen && (
                 <motion.div
                   key="header-nav-mobile"
                   variants={variants}
                   initial="enter"
                   animate="center"
-                  exit="exit"
-                  layout
                   transition={{
                     x: { type: "spring", stiffness: 300, damping: 30 },
                     opacity: { duration: 0.2 },
@@ -74,7 +71,6 @@ function Header({ title = "KIRSTEN", subHeader = false }) {
                   </ul>
                 </motion.div>
               )}
-              {/* </AnimatePresence> */}
             </div>
           </>
         )}
