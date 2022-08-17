@@ -1,22 +1,22 @@
 {
   "projects": [
     {
-      "id": 0,
-      "title": "Random Advice Generator",
-      "tags": ["ReactJS", "SCSS", "API"],
-      "description": "A simple app to generate random advice from an API.",
-      "image": "./assets/random-advice-generator.png",
-      "previewLink": "https://kmalcaba.github.io/random-advice-generator/",
-      "sourceLink": "https://github.com/kmalcaba/random-advice-generator"
-    },
-    {
-      "id": 1,
+      "id": "easybank-landing-page",
       "title": "Easybank Landing Page",
       "tags": ["ReactJS", "styled-components"],
       "description": "A sample landing page for a banking company. The design is implemented from Frontendmentor.",
       "image": "./assets/easybank-landing-page.png",
       "previewLink": "https://kmalcaba.github.io/easybank-landing-page/",
       "sourceLink": "https://github.com/kmalcaba/easybank-landing-page"
+    },
+    {
+      "id": "random-advice-generator",
+      "title": "Random Advice Generator",
+      "tags": ["ReactJS", "SCSS", "API"],
+      "description": "A simple app to generate random advice from an API.",
+      "image": "./assets/random-advice-generator.png",
+      "previewLink": "https://kmalcaba.github.io/random-advice-generator/",
+      "sourceLink": "https://github.com/kmalcaba/random-advice-generator"
     }
   ]
 }
