@@ -8,6 +8,15 @@
       "image": "./assets/random-advice-generator.png",
       "previewLink": "https://kmalcaba.github.io/random-advice-generator/",
       "sourceLink": "https://github.com/kmalcaba/random-advice-generator"
+    },
+    {
+      "id": 1,
+      "title": "Easybank Landing Page",
+      "tags": ["ReactJS", "styled-components"],
+      "description": "A sample landing page for a banking company. The design is implemented from Frontendmentor.",
+      "image": "./assets/easybank-landing-page.png",
+      "previewLink": "https://kmalcaba.github.io/easybank-landing-page/",
+      "sourceLink": "https://github.com/kmalcaba/easybank-landing-page"
     }
   ]
 }
