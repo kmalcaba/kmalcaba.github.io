@@ -1,0 +1,13 @@
+{
+  "projects": [
+    {
+      "id": 0,
+      "title": "Random Advice Generator",
+      "tags": ["ReactJS", "SCSS", "API"],
+      "description": "A simple app to generate random advice from an API.",
+      "image": "./assets/random-advice-generator.png",
+      "previewLink": "https://kmalcaba.github.io/random-advice-generator/",
+      "sourceLink": "https://github.com/kmalcaba/random-advice-generator"
+    }
+  ]
+}
