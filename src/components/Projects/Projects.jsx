@@ -7,7 +7,7 @@ import projectsJSON from "../../projects.json";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
-const TAGS_ARRAY = ["ReactJS", "HTML/CSS", "JavaScript", "SCSS", "All"];
+const TAGS_ARRAY = ["ReactJS", "HTML/CSS", "JavaScript", "SCSS", "API", "All"];
 
 function Projects() {
   const [projects, setProjects] = useState([
