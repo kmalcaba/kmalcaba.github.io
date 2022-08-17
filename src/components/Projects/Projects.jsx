@@ -7,8 +7,6 @@ import projectsJSON from "../../projects.json";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
-const TAGS_ARRAY = ["ReactJS", "HTML/CSS", "JavaScript", "SCSS", "API", "All"];
-
 function Projects() {
   const [projects, setProjects] = useState([
     ...projectsJSON.projects,
@@ -31,17 +29,8 @@ function Projects() {
       previewLink: "/",
       sourceLink: "/",
     },
-    {
-      id: 789,
-      title: "Project 3",
-      tags: ["JavaScript", "ReactJS"],
-      description:
-        "Integer blandit nisi in nisi rhoncus ultrices. Vestibulum et arcu. ",
-      image: images.about03,
-      previewLink: "/",
-      sourceLink: "/",
-    },
   ]);
+  const [tags, setTags] = useState(["All"]);
   const [activeFilter, setActiveFilter] = useState("All");
   const [filteredProjects, setFilteredProjects] = useState([]);
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
@@ -54,6 +43,24 @@ function Projects() {
   useEffect(() => {
     setFilteredProjects(projects);
   }, [projects]);
+
+  useEffect(() => {
+    const tagsArray = projects.map((project) => project.tags);
+
+    setTags(
+      tagsArray.reduce(
+        (previousValue, currentValue) => [
+          ...previousValue,
+          ...currentValue.filter((value) => !previousValue.includes(value)),
+        ],
+        []
+      )
+    );
+  }, [projects]);
+
+  useEffect(() => {
+    setTags((previousValue) => [...previousValue, "All"]);
+  }, []);
 
   useEffect(() => {
     setTimeout(() => {
@@ -72,7 +79,7 @@ function Projects() {
   return (
     <div className="project">
       <ul className="project-tags">
-        {TAGS_ARRAY.map((item) => (
+        {tags.map((item) => (
           <li
             key={`filter-${item}`}
             className={item === activeFilter ? "active" : undefined}
