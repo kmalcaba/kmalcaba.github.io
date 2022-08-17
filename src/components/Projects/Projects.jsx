@@ -7,8 +7,19 @@ import projectsJSON from "../../projects.json";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
+const PORTFOLIO = {
+  id: "portfolio",
+  title: "Portfolio website",
+  tags: ["ReactJS", "SCSS", "framer-motion"],
+  description: "Portfolio website, developed and designed by yours truly!",
+  image: images.portfolio,
+  previewLink: "/",
+  sourceLink: "https://github.com/kmalcaba/kmalcaba.github.io/tree/source",
+};
+
 function Projects() {
   const [projects, setProjects] = useState([
+    PORTFOLIO,
     ...projectsJSON.projects,
     {
       id: 123,
