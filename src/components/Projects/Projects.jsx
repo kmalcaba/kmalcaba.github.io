@@ -2,45 +2,41 @@ import "./Projects.scss";
 import ProjectCard from "../ProjectCard/ProjectCard";
 import { ContainerWrapper, MotionWrapper } from "../../wrapper";
 import { images } from "../../constants";
+import projectsJSON from "../../projects.json";
 
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
-const TAGS_ARRAY = [
-  "ReactJS",
-  "HTML/CSS",
-  "JavaScript",
-  "SCSS",
-  "styled-components",
-  "MERN",
-  "All",
-];
+const TAGS_ARRAY = ["ReactJS", "HTML/CSS", "JavaScript", "SCSS", "All"];
 
 function Projects() {
   const [projects, setProjects] = useState([
+    ...projectsJSON.projects,
     {
+      id: 123,
       title: "Project Title",
       tags: ["ReactJS", "SCSS"],
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium officiis qui ad consectetur quos dolorem consequatur exercitationem fugit debitis repudiandae placeat aperiam, iste animi laboriosam! Porro laborum vel possimus recusandae?",
+        "Curabitur ante urna, hendrerit eget mi at, venenatis scelerisque massa.",
       image: images.about01,
       previewLink: "/",
       sourceLink: "/",
     },
     {
+      id: 456,
       title: "Project 2",
       tags: ["JavaScript", "HTML/CSS"],
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium officiis qui ad consectetur quos dolorem consequatur exercitationem fugit debitis repudiandae placeat aperiam, iste animi laboriosam! Porro laborum vel possimus recusandae?",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       image: images.about02,
       previewLink: "/",
       sourceLink: "/",
     },
     {
+      id: 789,
       title: "Project 3",
       tags: ["JavaScript", "ReactJS"],
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium officiis qui ad consectetur quos dolorem consequatur exercitationem fugit debitis repudiandae placeat aperiam, iste animi laboriosam! Porro laborum vel possimus recusandae?",
+        "Integer blandit nisi in nisi rhoncus ultrices. Vestibulum et arcu. ",
       image: images.about03,
       previewLink: "/",
       sourceLink: "/",
@@ -57,7 +53,7 @@ function Projects() {
 
   useEffect(() => {
     setFilteredProjects(projects);
-  }, []);
+  }, [projects]);
 
   useEffect(() => {
     setTimeout(() => {
@@ -94,7 +90,7 @@ function Projects() {
         {filteredProjects.length > 0 ? (
           filteredProjects.map((project) => (
             <ProjectCard
-              key={project.title}
+              key={project.id}
               project={project}
               handleFilter={handleFilter}
             />
