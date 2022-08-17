@@ -17,6 +17,10 @@
     height: 300px;
     object-fit: cover;
     border-radius: 0.5rem;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      height: 200px;
+    }
   }
 
   h3 {
