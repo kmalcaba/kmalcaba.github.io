@@ -2,7 +2,7 @@ import "./Header.scss";
 import HighlightLink from "../HighlightLink/HighlightLink";
 import { RiMenuFill, RiCloseFill } from "react-icons/ri";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 const NAVBAR_LINKS = ["about", "projects", "contact"];
 
@@ -50,35 +50,27 @@ function Header({ title = "KIRSTEN", subHeader = false }) {
             <div className="header-nav-mobile">
               <RiMenuFill onClick={toggleHandler} />
 
-              <AnimatePresence initial={false}>
-                {isOpen && (
-                  <motion.div
-                    key="header-nav-mobile"
-                    variants={variants}
-                    initial="enter"
-                    animate="center"
-                    exit="exit"
-                    transition={{
-                      x: { type: "spring", stiffness: 300, damping: 30 },
-                      opacity: { duration: 0.2 },
-                    }}
-                  >
-                    <RiCloseFill onClick={toggleHandler} />
-                    <ul>
-                      {NAVBAR_LINKS.map((item) => (
-                        <li key={item}>
-                          <HighlightLink
-                            href={`#${item}`}
-                            onClick={toggleHandler}
-                          >
-                            {item}
-                          </HighlightLink>
-                        </li>
-                      ))}
-                    </ul>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+              {isOpen && (
+                <motion.div
+                  key="header-nav-mobile"
+                  variants={variants}
+                  initial="enter"
+                  animate="center"
+                  transition={{
+                    x: { type: "spring", stiffness: 300, damping: 30 },
+                    opacity: { duration: 0.2 },
+                  }}
+                >
+                  <RiCloseFill onClick={toggleHandler} />
+                  <ul>
+                    {NAVBAR_LINKS.map((item) => (
+                      <li key={item} onClick={toggleHandler}>
+                        <HighlightLink href={`#${item}`}>{item}</HighlightLink>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              )}
             </div>
           </>
         )}
