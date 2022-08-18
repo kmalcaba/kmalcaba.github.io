@@ -21,25 +21,6 @@ function Projects() {
   const [projects, setProjects] = useState([
     PORTFOLIO,
     ...projectsJSON.projects,
-    {
-      id: 123,
-      title: "Project Title",
-      tags: ["ReactJS", "SCSS"],
-      description:
-        "Curabitur ante urna, hendrerit eget mi at, venenatis scelerisque massa.",
-      image: images.about01,
-      previewLink: "/",
-      sourceLink: "/",
-    },
-    {
-      id: 456,
-      title: "Project 2",
-      tags: ["JavaScript", "HTML/CSS"],
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      image: images.about02,
-      previewLink: "/",
-      sourceLink: "/",
-    },
   ]);
   const [tags, setTags] = useState(["All"]);
   const [activeFilter, setActiveFilter] = useState("All");
