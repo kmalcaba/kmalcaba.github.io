@@ -13,12 +13,12 @@ function Hero() {
           <span>collaborated with teams</span> in building and testing{" "}
           <span>reliable, quality web applications and web sites</span>.
         </p>
-        {/* <p>
+        <p>
           Check out my{" "}
           <HighlightLink href="#projects">personal projects</HighlightLink>{" "}
           below, or <HighlightLink href="#contact">contact me</HighlightLink>{" "}
           for any opportunities!
-        </p> */}
+        </p>
       </div>
     </div>
   );
